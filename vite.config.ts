@@ -8,15 +8,6 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    // Configure Nitro for static site generation
-    nitro: {
-      preset: "static",
-    },
-  },
-  vite: {
-    base: "/sky-green-aid/",
-    build: {
-      outDir: "dist",
-    },
+    server: { entry: "server" },
   },
 });
