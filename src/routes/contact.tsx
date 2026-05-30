@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
+import vbw from "@/assets/vbw.png";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -19,8 +20,11 @@ function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <>
-      <section className="bg-brand-hero">
-        <div className="mx-auto max-w-7xl px-4 py-16 text-center md:py-24">
+      <section className="bg-brand-hero relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={vbw} alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-16 text-center md:py-24">
           <h1 className="text-4xl font-bold md:text-6xl">Get <span className="text-[var(--brand-red)]">Involved</span></h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             Whether you want to volunteer, donate or invite us to your community —
@@ -32,9 +36,9 @@ function Contact() {
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-20 md:grid-cols-2">
         <div className="space-y-6">
           {[
-            { icon: MapPin, t: "Headquarters", v: "Abuja, Nigeria", c: "var(--brand-green)" },
-            { icon: Mail, t: "Email", v: "info@oluremitinubufmo.org", c: "var(--sky)" },
-            { icon: Phone, t: "Phone", v: "+234 800 000 0000", c: "var(--brand-red)" },
+            { icon: MapPin, t: "Headquarters", v: "99 AN Amosu Crescent, NAF Valley Estate Asokoro, Abuja", c: "var(--brand-green)" },
+            { icon: Mail, t: "Email", v: "ntacables@gmail.com", c: "var(--sky)" },
+            { icon: Phone, t: "Phone", v: "+234 (0) 803 992 7859", c: "var(--brand-red)" },
           ].map(({ icon: Icon, t, v, c }) => (
             <div key={t} className="flex items-start gap-4 rounded-xl border bg-card p-5">
               <div className="flex h-11 w-11 items-center justify-center rounded-lg text-white" style={{ background: c }}>

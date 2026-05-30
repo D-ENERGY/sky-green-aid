@@ -21,8 +21,11 @@ function Index() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-brand-hero">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+      <section className="bg-brand-hero relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={hero} alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
           <div>
             <span className="inline-block rounded-full bg-white px-3 py-1 text-xs font-semibold text-[var(--brand-green)] shadow-sm ring-1 ring-[var(--brand-green)]/20">
               RC: 9511630 · Nationwide Initiative

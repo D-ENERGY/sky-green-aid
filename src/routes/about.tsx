@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import speech from "@/assets/tinubu-speech.png";
 import banner from "@/assets/banner-wide.png";
+import vbw from "@/assets/vbw.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -18,8 +19,11 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <>
-      <section className="bg-brand-hero">
-        <div className="mx-auto max-w-7xl px-4 py-16 text-center md:py-24">
+      <section className="bg-brand-hero relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={vbw} alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-16 text-center md:py-24">
           <h1 className="text-4xl font-bold md:text-6xl">About <span className="text-gradient-brand">Our Mission</span></h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             A nationwide humanitarian initiative bringing free, quality healthcare

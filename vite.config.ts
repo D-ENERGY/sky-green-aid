@@ -12,4 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    base: "/sky-green-aid/",
+    build: {
+      outDir: "dist",
+    },
+  },
 });

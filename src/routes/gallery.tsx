@@ -7,6 +7,7 @@ import title from "@/assets/banner-title.png";
 import hero from "@/assets/hero-poster.png";
 import ofn from "@/assets/ofn.png";
 import coordinator from "@/assets/coordinator.png";
+import vbw from "@/assets/vbw.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -35,8 +36,11 @@ const photos = [
 function Gallery() {
   return (
     <>
-      <section className="bg-brand-hero">
-        <div className="mx-auto max-w-7xl px-4 py-16 text-center md:py-24">
+      <section className="bg-brand-hero relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={vbw} alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-16 text-center md:py-24">
           <h1 className="text-4xl font-bold md:text-6xl">Moments of <span className="text-[var(--brand-green)]">Care</span></h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Highlights from our outreach camps across Nigeria.</p>
         </div>

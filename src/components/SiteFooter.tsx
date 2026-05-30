@@ -31,9 +31,9 @@ export function SiteFooter() {
         <div>
           <h4 className="mb-3 text-sm font-semibold">Contact</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>Abuja, Nigeria</li>
-            <li>info@oluremitinubufmo.org</li>
-            <li>+234 800 000 0000</li>
+            <li>99 AN Amosu Crescent, NAF Valley Estate Asokoro, Abuja</li>
+            <li>ntacables@gmail.com</li>
+            <li>+234 (0) 803 992 7859</li>
           </ul>
         </div>
         <div>
