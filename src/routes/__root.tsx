@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import siteBanner from "@/assets/site-banner.png";
 
 function NotFoundComponent() {
   return (
@@ -87,6 +88,9 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col">
         <SiteHeader />
+        <a href="/" aria-label="Oluremi Tinubu Free Medical Outreach" className="block">
+          <img src={siteBanner} alt="Oluremi Tinubu Free Medical Outreach — RC: 9511630" className="w-full h-auto" />
+        </a>
         <main className="flex-1"><Outlet /></main>
         <SiteFooter />
       </div>
